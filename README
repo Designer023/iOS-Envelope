@@ -1,0 +1,24 @@
+To use simply import the class
+#import "envelope.h"
+
+Then add it as a subview so it appears above everything else. This can be done in the viewDidLoad method
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+  
+    envelope *Env = [[envelope alloc] initWithFrame: self.view.frame
+                                           topFrame: CGRectMake(0, 0, 320, 290)
+                                        bottomFrame: CGRectMake(0, 53, 320, 427)
+                                           topImage:@"loading-upper.png" 
+                                        bottomImage:@"loading-base.png"];
+    [self.view addSubview:Env];
+
+}
+
+
+Specify the images and the dimensions of the frame. Currently the animation is hardcoded to the dimentions above!
+
+-dynamic animations need to be added
+-sounds need to be added
+-callbacks need to be added
