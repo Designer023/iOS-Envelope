@@ -1,9 +1,8 @@
 //
 //  envelope.h
-//  truelove
 //
 //  Created by Carl Topham on 12/02/2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
