@@ -22,3 +22,6 @@ Specify the images and the dimensions of the frame. Currently the animation is h
 -dynamic animations need to be added
 -sounds need to be added
 -callbacks need to be added
+
+
+You need to add the Quartzcore Framework to the project to avoid complier errors
