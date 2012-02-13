@@ -69,7 +69,7 @@
     transform.m34 = 1.0f / -zDistance;
     
     envelopeTopView.layer.anchorPoint = CGPointMake(0.5, 0);
-    envelopeTopView.center = CGPointMake(160, 0); // set center
+    envelopeTopView.center = CGPointMake((envelopeTopView.bounds.size.width /2), 0); // set center
     
     
     //PLAY SOUNDS - NEEDS IMPLEMENTING
@@ -85,8 +85,8 @@
         
     } 
                      completion:^(BOOL finished){
-                         NSValue *firstPoint = [NSValue valueWithCGPoint:CGPointMake(0, 53)];
-                         NSValue *secondPoint = [NSValue valueWithCGPoint:CGPointMake(0, 800)];
+                         NSValue *firstPoint = [NSValue valueWithCGPoint:CGPointMake(0, envelopeBaseImage.frame.origin.y)];
+                         NSValue *secondPoint = [NSValue valueWithCGPoint:CGPointMake(0, envelopeBaseImage.frame.origin.y + (envelopeBaseImage.bounds.size.height * 2))];
                          
                          NSArray *points = [NSArray arrayWithObjects:firstPoint, secondPoint, nil];
                          
@@ -112,6 +112,7 @@
                      }];
     [openButton setHidden:TRUE];
 }
+
 
 - (void)animationDone
 {
